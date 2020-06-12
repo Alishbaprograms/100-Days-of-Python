@@ -1,0 +1,39 @@
+a = "Hello world"
+print(a.strip())
+print(a.lower())
+print(a.upper())
+print(a.replace('H','J'))
+print(a.split(" "))
+b= "he" in a
+print(b)
+c= "He" in a
+print(c) #bool
+d="world" not in a
+print(d) #boolean
+a="hello "
+b="world"
+d= 1
+c= a+b+str(d) #casting and concatenation
+print(c)
+a= "fine"
+b="how are you? {}"
+print(b.format(a))
+age=12
+height = 6
+a="My age is {} and my height is {}fts" #place holders
+print(a.format(age, height))
+text= "I love \"Money Heist\" more than other series"
+print(text)
+text= "I love \n\"Money Heist\" more than other series"
+print(text)
+txt="Run in the sun, just for fun. let run!"
+a=txt.count("u")
+print("the total number of u are " + str(a) )#letter count
+print(3>4)
+print(4>3)
+a=3
+b=4
+if b > a:
+    print("b is greater than a")
+else:
+    print("b is not greater than a") #boolen if
