@@ -1,0 +1,94 @@
+choice = 0
+
+
+def main():
+    print("Enter 1 to APPEND record to the file")
+    print("Enter 2 to READ record from the file")
+    print("Enter 3 to ADD a record in sequence")
+    print("Enter 4 to DELETE a record from the file")
+    print("Enter 5 to EDIT a record in the file")
+    print("Enter 6 to SEARCH a record from the file")
+    print("Enter 7 to Exit")
+    choice = int(input("Your choice... "))
+    if 0 > choice or choice > 8:
+        print("invalid choice")
+    if choice == 1:
+        choice1()
+
+    if choice == 2:
+        choice2()
+
+    if choice == 3:
+        choice3()
+
+    if choice == 4:
+        choice4()
+
+
+def choice1():
+    rollno = 0
+    recnum = int(input("enter the number of records"))
+    inp = 0
+    f = open("s1.txt", "a")
+    while inp != recnum:
+        a = f.write(input("enter roll no."))
+        f.write(" ")
+        b = f.write(input("enter name"))
+        f.write(" ")
+        inp += 1
+    f.close()
+
+
+def choice2():
+    f = open("s1.txt", "r")
+    b = f.read()
+    print(b)
+
+
+def choice3():
+    char = ""
+    content = ""
+    count = 0
+    totals = 0
+    i = 0
+    x = 0
+    f = open("s1.txt", "r")
+    content = str(f.read())
+    print(len(content))
+    a = content.split()
+    c = int(a[i])
+    d = int(a[i + 2])
+    length = len(a)
+    while i < length:
+        if int(a[i]) > int(a[i + 2]):
+            temp = a[i]
+            c = a[i + 1]
+            d = temp
+    i += 1
+    print(a)
+
+
+def choice4():
+    char = ""
+    content = ""
+    count = 0
+    totals = 0
+    i = 0
+    x = 0
+    f = open("s1.txt", "r")
+
+    w = f.read()
+    f = open("s1.txt", "a")
+    a = w.split()
+    print(len(a))
+    length = len(a)
+    rem = input("enter the roll number u wish to delete: ")
+    while i != length:
+        if a[i] == rem:
+            a.pop(i)
+            a.pop(i + 1)
+
+        i += 1
+    print(a)
+
+main()
