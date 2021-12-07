@@ -1,0 +1,7 @@
+w = int(input("enter width of rectangle"))
+l = int(input("enter length of rectangle"))
+A = w * l
+print("the are of rectangle is: ", A)
+r = int(input("enter the radius  of sphere : "))
+V = (4 / 3) * 3 * (r ^ 3)
+print("the volume of sphere is: ", V)
